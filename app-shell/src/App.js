@@ -1,11 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-// const Button = React.lazy(() => import("todo-list/Button"));
-import Button from "todolist/Button";
+import React from 'react';
+
+// const Button = React.lazy(() => import("todo_list/Button"));
+import Button from "todo_list/Button";
 
 function App() {
   return (
     <div className="App">
+      <div>on app shell</div>
       <Button></Button>
     </div>
   );
