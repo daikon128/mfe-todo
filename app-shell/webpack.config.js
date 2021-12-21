@@ -36,7 +36,17 @@ module.exports = {
         remotes: {
           todo_list:
             'todo_list@http://localhost:8083/remoteEntry.js',
+          gadget:
+            'gadget@http://localhost:8084/remoteEntry.js'
         },
+        shared: {
+          react: {
+            singleton: true,
+          },
+          "react-dom": {
+            singleton: true,
+          }
+        }
       }
     ),
     new HtmlWebpackPlugin({

@@ -1,13 +1,15 @@
 import React from 'react';
 
-// const Button = React.lazy(() => import("todo_list/Button"));
 import Button from "todo_list/Button";
+// const Dice = React.lazy(() => import("gadget/Dice"));
+import Dice from "gadget/Dice";
 
 function App() {
   return (
     <div className="App">
       <div>on app shell</div>
       <Button></Button>
+      <Dice></Dice>
     </div>
   );
 }

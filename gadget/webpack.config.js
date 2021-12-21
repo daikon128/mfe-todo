@@ -3,7 +3,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 module.exports = {
   mode: 'development',
   devServer: {
-    port: 8083,
+    port: 8084,
   },
   module: {
     rules: [
@@ -30,12 +30,12 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin(
       {
-        name: 'todo_list',
+        name: 'gadget',
         filename:
           'remoteEntry.js',
         exposes: {
-          './Button':
-            './src/Button',
+          './Dice':
+            './src/Dice',
         },
         shared: {
           react: {
