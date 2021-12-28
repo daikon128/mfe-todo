@@ -1,6 +1,7 @@
 import React from 'react';
 import Dice from './Dice'
 import Clock from "./Clock";
+import Sandbox from "./Sandbox";
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
       <Dice></Dice>
       <h1>Clock</h1>
       <Clock></Clock>
+      <h1>Sandbox</h1>
+      <Sandbox></Sandbox>
     </div>
   );
 }
