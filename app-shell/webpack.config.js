@@ -1,9 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+const {dependencies: deps} = require("./package.json");
 module.exports = {
   mode: 'development',
   devServer: {
     port: 8082,
+  },
+  output: {
+    publicPath: 'http://localhost:8082/'
   },
   module: {
     rules: [
@@ -42,9 +46,13 @@ module.exports = {
         shared: {
           react: {
             singleton: true,
+            eager: true,
+            requiredVersion: deps.react
           },
           "react-dom": {
             singleton: true,
+            eager: true,
+            requiredVersion: deps['react-dom']
           }
         }
       }
