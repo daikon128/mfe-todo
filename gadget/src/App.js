@@ -1,7 +1,7 @@
 import React from 'react';
 import Dice from './Dice'
 import Clock from "./Clock";
-import Sandbox from "./Sandbox";
+import JsxSandbox from "./JsxSandbox";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <h1>Clock</h1>
       <Clock></Clock>
       <h1>Sandbox</h1>
-      <Sandbox></Sandbox>
+      <JsxSandbox></JsxSandbox>
     </div>
   );
 }

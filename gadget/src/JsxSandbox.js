@@ -1,8 +1,9 @@
 import React from "react";
 import Dice from "./Dice";
 
-const Sandbox = () => {
+const JsxSandbox = () => {
     const title = 'react'
+    const stringArray = ["a", "b", "c"]
     return (
         <div>
             <div>{title}</div>
@@ -14,10 +15,17 @@ const Sandbox = () => {
                 <div className="thisIsHtmlClass">dice in sandbox</div>
                 <Dice></Dice>
             </div>
+            <div>
+                <ul>
+                    {stringArray.map((text, index) => (
+                        <li>{text}</li>
+                        ))}
+                </ul>
+            </div>
             <ul>
             </ul>
         </div>
     )
 };
 
-export default Sandbox;
+export default JsxSandbox;
