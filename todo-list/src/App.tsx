@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from "./components/Button";
+import TodoList from "./components/TodoList";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <Button></Button>
+        <TodoList></TodoList>
       </header>
     </div>
   );
