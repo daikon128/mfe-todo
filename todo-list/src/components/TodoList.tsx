@@ -27,7 +27,7 @@ const TodoList = () => {
     return (
       <div className="todo">
         <div>title: {todo.title}</div>
-        <div>description: {todo.title}</div>
+        <div>description: {todo.description}</div>
         {
           todo.schedule != null
             ? <div>schedule: {todo.schedule.start.toDateString()} ~ {todo.schedule.end.toDateString()}</div>
