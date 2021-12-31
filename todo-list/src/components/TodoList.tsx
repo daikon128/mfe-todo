@@ -25,15 +25,18 @@ const TodoList = () => {
 
   const TodoComponent = (todo: Todo) => {
     return (
-      <div className="todo">
-        <div>title: {todo.title}</div>
-        <div>description: {todo.description}</div>
-        {
-          todo.schedule != null
-            ? <div>schedule: {todo.schedule.start.toDateString()} ~ {todo.schedule.end.toDateString()}</div>
-            : <div>schedule: not yet fixed</div>
-        }
-      </div>
+      <React.Fragment>
+        <div className="todo">
+          <div>title: {todo.title}</div>
+          <div>description: {todo.description}</div>
+          {
+            todo.schedule != null
+              ? <div>schedule: {todo.schedule.start.toDateString()} ~ {todo.schedule.end.toDateString()}</div>
+              : <div>schedule: not yet fixed</div>
+          }
+        </div>
+        <hr />
+      </React.Fragment>
     )
   }
 
@@ -58,7 +61,6 @@ const TodoList = () => {
             <TodoComponent key={index} title={todo.title} description={todo.description} schedule={todo.schedule} />
           )
         }
-
       </div>
     )
   }
