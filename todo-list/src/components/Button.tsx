@@ -1,11 +1,11 @@
 import React from 'react'
 
 const Button = () => {
-    return (
-        <div>
-            <button>ts todo button</button>
-        </div>
-    );
+  return (
+    <div>
+      <button>ts todo button</button>
+    </div>
+  );
 };
 
 export default Button;
