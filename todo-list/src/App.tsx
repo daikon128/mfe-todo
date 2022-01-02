@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from "./components/Button";
 import TodoList from "./components/TodoList";
+import AddTodo from "./components/AddTodo";
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <Button></Button>
+        <hr />
+        <AddTodo></AddTodo>
+        <hr />
         <TodoList></TodoList>
       </header>
     </div>
