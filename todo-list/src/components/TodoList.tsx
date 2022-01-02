@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {VFC} from 'react'
 import '../css/todo.css'
 
 const TodoList = () => {
@@ -51,14 +51,14 @@ const TodoList = () => {
 
   type ListsProps = {
     todos: Array<Todo>
-  };
+  }
 
-  const Lists = (props: ListsProps) => {
+  const Lists:VFC<ListsProps> = (props) => {
     return (
       <div className="todo-lists">
         {
           props.todos.map((todo, index) =>
-            <TodoComponent key={index} title={todo.title} description={todo.description} schedule={todo.schedule} />
+            <TodoComponent key={index} {...todo} />
           )
         }
       </div>
