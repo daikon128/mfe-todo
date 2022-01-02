@@ -49,11 +49,7 @@ const TodoList = () => {
     } | null
   }
 
-  type ListsProps = {
-    todos: Array<Todo>
-  }
-
-  const Lists:VFC<ListsProps> = (props) => {
+  const Lists:VFC<{todos: Array<Todo>}> = (props) => {
     return (
       <div className="todo-lists">
         {
