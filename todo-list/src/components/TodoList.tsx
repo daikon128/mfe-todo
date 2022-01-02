@@ -1,4 +1,4 @@
-import React, {VFC} from 'react'
+import React from 'react'
 import '../css/todo.css'
 
 const TodoList = () => {
@@ -49,7 +49,7 @@ const TodoList = () => {
     } | null
   }
 
-  const Lists:VFC<{todos: Array<Todo>}> = (props) => {
+  const Lists = (props: {todos: Array<Todo>}) => {
     return (
       <div className="todo-lists">
         {
