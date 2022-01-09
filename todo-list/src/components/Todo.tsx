@@ -1,4 +1,5 @@
 import React from 'react'
+import {TodoItem} from "../lib/types/Todo";
 
 export function Todo(todo: TodoItem) {
   return (
@@ -8,21 +9,12 @@ export function Todo(todo: TodoItem) {
         <div>description: {todo.description}</div>
         {
           todo.schedule != null
-            ? <div>schedule: {todo.schedule.start.toDateString()} ~ {todo.schedule.end.toDateString()}</div>
+            ? <div>schedule: {todo.schedule.start?.toDateString()} ~ {todo.schedule.end?.toDateString()}</div>
             : <div>schedule: not yet fixed</div>
         }
       </div>
       <hr />
     </React.Fragment>
   )
-}
-
-export type TodoItem = {
-  title: string,
-  description: string,
-  schedule: {
-    start: Date,
-    end: Date
-  } | null
 }
 

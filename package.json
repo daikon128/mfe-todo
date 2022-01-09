@@ -7,6 +7,7 @@
     "serve:app-shell": "npm --prefix ./app-shell run serve",
     "serve:gadget": "npm --prefix ./gadget run serve",
     "serve:todo-list": "npm --prefix ./todo-list run serve",
+    "serve:todo-list-api": "npm --prefix ./todo-list-api run serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

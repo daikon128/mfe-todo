@@ -1,28 +1,19 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import '../css/todo.css'
-import {Todo, TodoItem} from "./Todo";
+import {Todo} from "./Todo";
+import {fetchTodoList} from "../gateway/TodoList";
+import {TodoItem} from "../lib/types/Todo";
 
 const TodoList = () => {
-  const data: TodoItem[] = [
-    {
-      title: "cleaning",
-      description: "",
-      schedule: {
-        start: new Date(),
-        end: new Date()
-      }
-    },
-    {
-      title: "study",
-      description: "",
-      schedule: null
-    },
-    {
-      title: "shopping",
-      description: "",
-      schedule: null
-    }
-  ]
+  const [todoList, setTodoList] = useState<TodoItem[]>([])
+  useEffect(() => {
+    fetchTodoList()
+      .then((todoList: TodoItem[] | null) => {
+        if (todoList != null) {
+          setTodoList(todoList)
+        }
+      }).catch((e) => console.log(e.toString()))
+  }, [])
 
   const Lists = (props: {todos: Array<TodoItem>}) => {
     return (
@@ -36,7 +27,7 @@ const TodoList = () => {
     )
   }
   return (
-    <Lists todos={data}/>
+    <Lists todos={todoList}/>
   )
 }
 
