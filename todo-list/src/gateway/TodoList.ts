@@ -12,6 +12,7 @@ export function fetchTodoList(): Promise<TodoItem[]> {
           end: endDate
         } : null
         return {
+          id: todo.id,
           title: todo.title,
           description: todo.description,
           schedule: schedule

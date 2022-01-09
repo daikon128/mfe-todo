@@ -5,7 +5,9 @@ export function Todo(todo: TodoItem) {
   return (
     <React.Fragment>
       <div className="todo">
-        <div>title: {todo.title}</div>
+        <div>
+          title: {todo.title}
+        </div>
         <div>description: {todo.description}</div>
         {
           todo.schedule != null

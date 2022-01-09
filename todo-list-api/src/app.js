@@ -11,6 +11,7 @@ const server = app.listen(port, function(){
 app.get("/todoList", function(req, res, next){
   const data = [
     {
+      id: 1,
       title: "cleaning",
       description: "",
       schedule: {
@@ -19,16 +20,19 @@ app.get("/todoList", function(req, res, next){
       }
     },
     {
+      id: 2,
       title: "study",
       description: "",
       schedule: null
     },
     {
+      id: 3,
       title: "shopping",
       description: "",
       schedule: null
     },
     {
+      id: 4,
       title: "sleep",
       description: "",
       schedule: null

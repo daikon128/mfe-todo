@@ -13,6 +13,7 @@ export async function getTodList(): Promise<GetTodListResponse>  {
 }
 
 export type Todo = {
+  id: number,
   title: string,
   description: string,
   schedule: {
