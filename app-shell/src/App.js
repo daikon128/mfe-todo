@@ -1,23 +1,20 @@
 import React from 'react';
-
-import Button from "todo_list/Button";
-import Dice from "gadget/Dice";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <div>on app shell</div>
-      <ul>
-        <li>
-          <Link to="/todo">Todo</Link>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <Link to="/gadget">Gadget</Link>
-        </li>
-      </ul>
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem"
+        }}
+      >
+        <Link to="/todo">Todo</Link>
+        <Link to="/gadget">Gadget</Link>
+      </nav>
+      <Outlet />
     </div>
   );
 }
