@@ -1,9 +1,9 @@
 import React from "react";
-import Button from 'todo_list/Button'
+import TodoList from 'todo_list/TodoList'
 
 export default function Todo() {
   return (
-    <Button></Button>
+    <TodoList></TodoList>
   )
 
 }

@@ -38,6 +38,8 @@ module.exports = {
           'remoteEntry.js',
         exposes: {
           './Button': './src/components/Button',
+          './TodoList': './src/components/TodoList',
+          './Todo': './src/components/Todo',
         },
         shared: {
           react: {
