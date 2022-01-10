@@ -14,7 +14,7 @@ function App() {
         <hr />
         <AddTodo></AddTodo>
         <hr />
-        <TodoList></TodoList>
+        <TodoList onClickTodoTitle={(id: number) => alert(`click ${id} title`)}></TodoList>
       </header>
     </div>
   );

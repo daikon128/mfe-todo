@@ -4,7 +4,7 @@ import {Todo} from "./Todo";
 import {fetchTodoList} from "../gateway/TodoList";
 import {TodoItem} from "../lib/types/Todo";
 
-const TodoList = () => {
+const TodoList = (props: { onClickTodoTitle: (todoId: number) => void }) => {
   const [todoList, setTodoList] = useState<TodoItem[]>([])
   useEffect(() => {
     fetchTodoList()
@@ -15,19 +15,19 @@ const TodoList = () => {
       }).catch((e) => console.log(e.toString()))
   }, [])
 
-  const Lists = (props: {todos: Array<TodoItem>}) => {
+  const Lists = (props: {todos: Array<TodoItem>, onClickTodoTitle: (todoId: number) => void}) => {
     return (
       <div className="todo-lists">
         {
-          props.todos.map((todo, index) =>
-            <Todo key={index} {...todo} />
-          )
+          props.todos.map((todo, index) => {
+            return <Todo key={index} todo={todo} onClickTodoTitle={props.onClickTodoTitle}/>
+          })
         }
       </div>
     )
   }
   return (
-    <Lists todos={todoList}/>
+    <Lists todos={todoList} onClickTodoTitle={props.onClickTodoTitle}/>
   )
 }
 

@@ -1,11 +1,13 @@
 import React from 'react'
 import {TodoItem} from "../lib/types/Todo";
 
-export function Todo(todo: TodoItem) {
+export function Todo(props: { todo: TodoItem, onClickTodoTitle: (todoId: number) => void }) {
+  const todo = props.todo
+  const onClickTitle = () => props.onClickTodoTitle(todo.id)
   return (
     <React.Fragment>
       <div className="todo">
-        <div>
+        <div onClick={onClickTitle}>
           title: {todo.title}
         </div>
         <div>description: {todo.description}</div>
