@@ -2,6 +2,7 @@ import React from 'react';
 import Button from "./components/Button";
 import TodoList from "./components/TodoList";
 import AddTodo from "./components/AddTodo";
+import TodoEdit from "./components/TodoEdit";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <AddTodo></AddTodo>
         <hr />
         <TodoList onClickTodoTitle={(id: number) => alert(`click ${id} title`)}></TodoList>
+        <hr />
+        <TodoEdit todoId={1} />
       </header>
     </div>
   );

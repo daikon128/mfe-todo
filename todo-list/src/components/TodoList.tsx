@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import '../css/todo.css'
 import {Todo} from "./Todo";
-import {fetchTodoList} from "../gateway/TodoList";
+import {fetchTodoList} from "../gateway/Todo";
 import {TodoItem} from "../lib/types/Todo";
 
 const TodoList = (props: { onClickTodoTitle: (todoId: number) => void }) => {

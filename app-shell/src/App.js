@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from "react-router-dom";
+import {NavLink, Outlet} from "react-router-dom";
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
           paddingBottom: "1rem"
         }}
       >
-        <Link to="/todo">Todo</Link>
-        <Link to="/gadget">Gadget</Link>
+        <NavLink to="/todoList">Todo</NavLink>
+        <NavLink to="/gadget">Gadget</NavLink>
       </nav>
       <Outlet />
     </div>

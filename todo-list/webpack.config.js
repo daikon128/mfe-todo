@@ -40,6 +40,7 @@ module.exports = {
           './Button': './src/components/Button',
           './TodoList': './src/components/TodoList',
           './Todo': './src/components/Todo',
+          './TodoEdit': './src/components/TodoEdit',
         },
         shared: {
           react: {
