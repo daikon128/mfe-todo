@@ -8,6 +8,11 @@
     "serve:gadget": "npm --prefix ./gadget run serve",
     "serve:todo-list": "npm --prefix ./todo-list run serve",
     "serve:todo-list-api": "npm --prefix ./todo-list-api run serve",
+    "install-all": "npm-run-all -p \"install:*\"",
+    "install:app-shell": "npm --prefix ./app-shell install",
+    "install:gadget": "npm --prefix ./gadget install",
+    "install:todo-list": "npm --prefix ./todo-list install",
+    "install:todo-list-api": "npm --prefix ./todo-list-api install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
