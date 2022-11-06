@@ -11,7 +11,7 @@ function App() {
           paddingBottom: "1rem"
         }}
       >
-        <NavLink to="/todoList">Todo</NavLink>
+        <NavLink to="/todo-list">Todo</NavLink>
         <NavLink to="/gadget">Gadget</NavLink>
       </nav>
       <Outlet />

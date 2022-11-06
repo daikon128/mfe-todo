@@ -1,10 +1,8 @@
 import axios, {AxiosResponse} from "axios";
 
-const url = 'http://localhost:8003'
-
 export async function getTodoList(): Promise<GetTodoListResponse>  {
   return axios({
-    url: `${url}/todoList`,
+    url: `/todoList`,
     method: "GET"
   }).then((res: AxiosResponse<GetTodoListResponse>) => {
     const {data, status} = res;
@@ -13,7 +11,7 @@ export async function getTodoList(): Promise<GetTodoListResponse>  {
 }
 export async function getTodo(id: number): Promise<GetTodoResponse>  {
   return axios({
-    url: `${url}/todoList/${id}`,
+    url: `/todoList/${id}`,
     method: "GET"
   }).then((res: AxiosResponse<GetTodoResponse>) => {
     const {data, status} = res;

@@ -12,7 +12,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="gadget" element={<Gadget />}/>
-          <Route path="todoList" element={<TodoListPage />}>
+          <Route path="todo-list" element={<TodoListPage />}>
             <Route path=":todoId" element={<TodoEditPage />}/>
           </Route>
           <Route

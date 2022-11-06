@@ -40,7 +40,7 @@ module.exports = {
           'remoteEntry.js',
         remotes: {
           todo_list:
-            'todo_list@http://localhost:8083/remoteEntry.js',
+            'todo_list@http://localhost:8000/todoListComponent/remoteEntry.js',
           gadget:
             'gadget@http://localhost:8084/remoteEntry.js'
         },

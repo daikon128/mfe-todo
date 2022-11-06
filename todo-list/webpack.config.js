@@ -6,9 +6,10 @@ module.exports = {
   mode: 'development',
   devServer: {
     port: 8083,
+    allowedHosts: 'all' // TODO
   },
   output: {
-    publicPath: 'http://localhost:8083/'
+    publicPath: 'http://localhost:8000/todoListComponent/'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js']

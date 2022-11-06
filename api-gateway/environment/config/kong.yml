@@ -7,3 +7,15 @@ services:
       - name: app-shell-routing
         paths:
           - /
+  - name: todo-list-api
+    url: http://host.docker.internal:8003/todoList
+    routes:
+      - name: todo-list-api-routing
+        paths:
+          - /todoList
+  - name: todo-list-component
+    url: http://host.docker.internal:8083/todoListComponent
+    routes:
+      - name: todo-list-component-routing
+        paths:
+          - /todoListComponent
