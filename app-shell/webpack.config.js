@@ -5,6 +5,7 @@ module.exports = {
   mode: 'development',
   devServer: {
     port: 8082,
+    allowedHosts: 'all' // TODO
   },
   output: {
     publicPath: 'http://localhost:8082/'

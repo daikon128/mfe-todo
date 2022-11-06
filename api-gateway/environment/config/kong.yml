@@ -2,7 +2,7 @@ _format_version: "1.1"
 
 services:
   - name: app-shell
-    url: http://localhost:8082
+    url: http://host.docker.internal:8082
     routes:
       - name: app-shell-routing
         paths:

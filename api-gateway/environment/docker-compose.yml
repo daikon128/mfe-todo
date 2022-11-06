@@ -1,6 +1,8 @@
 version: "3"
 services:
   api-gateway:
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     image: kong:latest
     env_file: .env
     ports:
@@ -10,8 +12,3 @@ services:
       - "8444:8444"
     volumes:
       - ./config:/opt/kong
-    networks:
-      - mfe-todo-net
-networks:
-  mfe-todo-net:
-    external: false
