@@ -1,0 +1,17 @@
+version: "3"
+services:
+  api-gateway:
+    image: kong:latest
+    env_file: .env
+    ports:
+      - "8000:8000"
+      - "8443:8443"
+      - "8001:8001"
+      - "8444:8444"
+    volumes:
+      - ./config:/opt/kong
+    networks:
+      - mfe-todo-net
+networks:
+  mfe-todo-net:
+    external: false
